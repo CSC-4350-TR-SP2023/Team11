@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- This is our CSS to change the looks! You will need the background img to be in same folder as html-->
+    <link href='https://fonts.googleapis.com/css?family=League Spartan' rel='stylesheet'>
+    <link rel="stylesheet" type="text/css" href="LoginPage.css" />
+    <style>
+    </style>
+    <!-- This section is for our JavaScript if we need it! -->
+<script>
+    function next(){
+        var username = document.getElementById("uname").value;
+        //stores username for the other pages to use!
+        sessionStorage.setItem("key", username);
+        if(username != ""){
+            window.location.href='MainScramblerPage.html';
+        } else {
+            document.getElementById("p3").style.opacity = 1;
+        }
+    }
+</script>
+</head>
+<!-- This is the body information -->
+<body> 
+    <h1 class = "header">Welcome to your ScramblerPassword!</h1>
+    <p class = "p1">Please login to start scrambling your password.</p>
+    <div class="container">
+        <form>
+        <label for="uname"><b>Enter Username</b></label>
+        <br>
+        <input type="text" placeholder="Enter Username" id="uname" name="uname" required>
+        <br>
+        <p id ="p3">Please enter a valid username!</p>
+        <button type="button" onclick="next()"class="button"><b>Continue</b></button>
+        </form>
+    </div>
+    <p class = "p2"><b>New user?</b>
+        <br><a href="SignUpPage.html" id="link">Click here</a> to create a login.
+    </p>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- This is our CSS to change the looks! You will need the background img to be in same folder as html-->
+    <link href='https://fonts.googleapis.com/css?family=League Spartan' rel='stylesheet'>
+    <link rel="stylesheet" type="text/css" href="SignUpPage.css" />
+    <style>
+    </style>
+    <!-- This section is for our JavaScript if we need it! -->
+<script>
+    function signup() {
+        var username = document.getElementById("uname").value;
+        //signup function to be done later
+        if(username != ""){
+            window.location.href='LoginPage.html';
+        } else {
+            window.scrollTo(0, 0);
+            document.getElementById("p3").style.opacity = 1;
+        }
+    }
+</script>
+</head>
+<!-- This is the body information -->
+<body> 
+    <h1 class = "header">Create a Login!</h1>
+    <p class = "p1">
+        Enter a username and scramble the image squares below to set your password.
+        <br>Click on two squares to switch their positions or hit the scramble button to do it automatically!
+        <br>When you are finished hit sign up to start logging in.
+    </p>
+    <div class="container">
+        <form>
+        <label for="uname"><b>Create A Username</b></label>
+        <br>
+        <input type="text" placeholder="Enter Username" id="uname" name="uname" required>
+        </form>
+        <p id ="p3">Please enter a valid username!</p>
+        <div>
+            <button type="button" id="button1"><b>SCRAMBLE!</b></button>
+        </div>
+        <div class ="grid">
+            <img src="9.png">
+            <img src="8.png">
+            <img src="7.png">
+            <img src="6.png">
+            <img src="5.png">
+            <img src="4.png">
+            <img src="3.png">
+            <img src="2.png">
+            <img src="1.png">
+        </div>
+        <div>
+            <button type="button" onclick="signup()" id="button2"><b>Sign Up</b></button>
+        </div>
+    </div>
+    <p class = "p2"><b>Got a Login?</b>
+        <br><a href="LoginPage.html" id="link">Click here</a> to go back to the login page.
+    </p>
+</body>
+</html>

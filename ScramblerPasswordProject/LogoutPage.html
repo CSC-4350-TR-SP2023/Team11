@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- This is our CSS to change the looks! You will need the background img to be in same folder as html-->
+    <link href='https://fonts.googleapis.com/css?family=League Spartan' rel='stylesheet'>
+    <link rel="stylesheet" type="text/css" href="LogoutPage.css" />
+    <style>
+    </style>
+    <!-- This section is for our JavaScript if we need it! -->
+<script>
+    var username = sessionStorage.getItem("key");
+    function logout(){
+        window.location.href='LoginPage.html';
+    }
+</script>
+</head>
+<!-- This is the body information -->
+<body> 
+    <h1 id = "header">Congrats. You logged in!</h1>
+    <p class = "p1">Hit the logout button to log out.</p>
+    <button type="button" onclick="logout()"class="button"><b>Logout</b></button>
+    <p class = "p2"><b>Remake your password?</b>
+        <br><a href="ForgotPage.html" id="link">Click here</a> to rescramble it.
+    </p>
+</body>
+</html>

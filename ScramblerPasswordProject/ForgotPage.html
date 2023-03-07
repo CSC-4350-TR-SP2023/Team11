@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- This is our CSS to change the looks! You will need the background img to be in same folder as html-->
+    <link href='https://fonts.googleapis.com/css?family=League Spartan' rel='stylesheet'>
+    <link rel="stylesheet" type="text/css" href="ForgotPage.css" />
+    <style>
+    </style>
+    <!-- This section is for our JavaScript if we need it! -->
+<script>
+    function update() {
+        var username = sessionStorage.getItem("key");
+        //update function to be done later
+        window.location.href='LoginPage.html';
+    }
+</script>
+</head>
+<!-- This is the body information -->
+<body> 
+    <h1 class = "header">Remake your Password!</h1>
+    <p class = "p1">
+        Rescramble the image squares below to update your password.
+        <br>Click on two squares to switch their positions or hit the scramble button to do it automatically!
+        <br>When you are finished hit remake and log back in.
+    </p>
+    <div class="container">
+        <div>
+            <button type="button" id="button1"><b>SCRAMBLE!</b></button>
+        </div>
+        <div class ="grid">
+            <img src="9.png">
+            <img src="8.png">
+            <img src="7.png">
+            <img src="6.png">
+            <img src="5.png">
+            <img src="4.png">
+            <img src="3.png">
+            <img src="2.png">
+            <img src="1.png">
+        </div>
+        <div>
+            <button type="button" onclick="update()" id="button2"><b>REMAKE</b></button>
+        </div>
+    </div>
+    <p class = "p3"><b>Wanna Logout?</b>
+        <br><a href="LoginPage.html" id="link">Click here</a> to go back to the login page.
+    </p>
+</body>
+</html>

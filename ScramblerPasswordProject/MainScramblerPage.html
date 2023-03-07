@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- This is our CSS to change the looks! You will need the background img to be in same folder as html-->
+    <link href='https://fonts.googleapis.com/css?family=League Spartan' rel='stylesheet'>
+    <link rel="stylesheet" type="text/css" href="MainScramblerPage.css" />
+    <style>
+    </style>
+    <!-- This section is for our JavaScript if we need it! -->
+    <script>
+        function login() {
+            var username = sessionStorage.getItem("key");
+            window.location.href='LogoutPage.html';
+        }
+    </script>
+</head>
+<!-- This is the body information -->
+<body>
+    <h1 class = "header">Configure your Password!</h1>
+    <p class = "p1">Scramble the images in the correct sequence you setted up.
+        <br>Hit Login once you are done scrambling.
+    </p>
+    <div class = "container">
+        <div class ="grid">
+            <img src="9.png">
+            <img src="8.png">
+            <img src="7.png">
+            <img src="6.png">
+            <img src="5.png">
+            <img src="4.png">
+            <img src="3.png">
+            <img src="2.png">
+            <img src="1.png">
+        </div>
+        <div>
+            <button type="button" onclick="login()" id="button"><b>Login</b></button>
+        </div>
+    </div>
+    <p class = "p2"><b>Forgot Your Password?</b>
+        <br><a href="ForgotPage.html" id="link">Click here</a> to rescramble it.
+    </p>
+</body>
+</html>
